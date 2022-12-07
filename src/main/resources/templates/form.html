@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo Spring</title>
+</head>
+<body>
+    <form action="" method="post" th:object="${form}">
+        <h1>Cadastro de diaristas</h1>
+        <label for="nome">Nome</label>
+        <input type="text" th:field="*{nome}"><br>
+
+        <label for="nome">Telefone</label>
+        <input type="text" th:field="*{telefone}"><br>
+
+        <label for="nome">CPF</label>
+        <input type="text" th:field="*{cpf}"><br>
+        
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
