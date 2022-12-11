@@ -18,17 +18,15 @@ public class DiaristaController {
 
     @GetMapping
     public ModelAndView buscarTodos() {
-
         var modelAndView = new ModelAndView("listar_diaristas");
         modelAndView.addObject("diaristas", repository.findAll());
         return modelAndView;
-
     }
 
     @GetMapping("/{id}")
     public ModelAndView buscarPorId(@PathVariable Long id) {
         var modelAndView = new ModelAndView("detalhes");
-        modelAndView.addObject("diarista", repository.findById(id));
+        modelAndView.addObject("diarista", repository.getReferenceById(id));
         return modelAndView;
     }
 }
